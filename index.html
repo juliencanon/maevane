@@ -1,8 +1,227 @@
-<html>
-  <head>
-   <title>maevane.com</title>
-  </head>
-  <body>
-    maevane.com
-  </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Maevane – Expérimentation Cloud Natif</title>
+  <meta name="description" content="Maevane est une entreprise d’expérimentation dans l’univers cloud natif. Explorez de nouveaux horizons technologiques !" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main: #8ECAE6; /* Bleu Ciel */
+      --cta: #F2B5D4; /* Rose Doux */
+      --bg: #FFFFFF;  /* Blanc Pur */
+      --text: #222;
+      --card: #fff;
+      --card-shadow: 0 4px 24px 0 rgba(142,202,230,.07);
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--bg); /* Blanc Pur */
+      color: var(--text);
+      margin: 0; padding: 0;
+      line-height: 1.6;
+    }
+    header { background: #fff; box-shadow: 0 2px 8px #eaf0fa; padding: 1.2rem 0; }
+    .container {
+      max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;
+    }
+    .navbar { display: flex; align-items: center; justify-content: space-between; }
+    .navbar .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--main); /* Bleu Ciel */
+      letter-spacing: -2px;
+      text-decoration: none;
+    }
+    .navbar nav a {
+      color: var(--main); /* Bleu Ciel */
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .navbar nav a:hover {
+      color: var(--cta); /* Rose Doux */
+      border-bottom: 2px solid var(--cta);
+    }
+    /* HERO */
+    .hero {
+      padding: 5rem 0 2.5rem 0;
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      gap: 2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--main); /* Bleu Ciel */
+      border-bottom: 4px solid var(--main);
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.25rem; color: #333;
+      max-width: 600px; margin: 0 auto 1.3rem auto;
+    }
+    .btn-main {
+      background: var(--cta); /* Rose Doux */
+      color: var(--bg);      /* Blanc Pur */
+      padding: 0.95em 2em;
+      border: none;
+      border-radius: 2em;
+      font-size: 1.18rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 10px 24px -6px #f2b5d460;
+    }
+    .btn-main:hover {
+      background: #1c97a3;
+    }
+    /* SECTIONS */
+    section { margin: 3.5rem 0; }
+    .section-title {
+      color: var(--main); /* Bleu Ciel */
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      border-bottom: 2.5px solid var(--main);
+      display: inline-block;
+      padding: 0 1.1em 0.16em 1.1em;
+      border-radius: 1em;
+    }
+    .values-cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 1.8em;
+      box-shadow: var(--card-shadow);
+      padding: 2rem 1.6rem;
+      flex: 1 1 250px;
+      min-width: 220px;
+      max-width: 320px;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .card-icon {
+      font-size: 2.6rem; color: var(--main); margin-bottom: 0.8rem;
+    }
+    .card-title {
+      color: var(--main); /* Bleu Ciel */
+      margin-bottom: 0.2rem;
+    }
+    .card-desc {
+      color: #333;
+    }
+    /* CONTACT */
+    .contact {
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .contact p { margin-bottom: 1.5rem; }
+    .footer {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--main);
+      background: #fff;
+      padding: 1.8rem 0 1rem 0;
+      margin-top: 4rem;
+      border-top: 1px solid var(--main);
+    }
+    @media (max-width: 750px) {
+      .navbar nav a { margin-left: 1.1rem; font-size: 1rem; }
+      .values-cards { flex-direction: column; gap: 1rem; }
+      .hero { padding-top: 2.6rem; }
+      section { margin: 2.2rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="#" class="logo" style="display:flex;align-items:center;gap:0.7em;text-decoration:none;">
+  <img src="logo-single.png" alt="Logo Maevane" height="44" width="44" style="vertical-align:middle;display:inline-block;border-radius:12px;box-shadow:0 2px 10px #8ecae618;" />
+  <span style="color:var(--main);font-weight:800;font-size:1.15em;letter-spacing:-1px;">Maevane</span>
+</a>
+      <nav>
+        <a href="#mission">Notre mission</a>
+        <a href="#experimentation">Expérimentation</a>
+        <a href="#valeurs">Valeurs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Expérimentons l’avenir cloud natif</h1>
+      <p>Maevane explore, conçoit et challenge le cloud natif pour repousser les limites de l’innovation numérique avec audace et pragmatisme.</p>
+      <a href="#contact" class="btn-main">Nous contacter</a>
+    </section>
+    <section id="mission" class="container">
+      <div class="section-title">Notre mission</div>
+      <p style="text-align:center;max-width:700px;margin:0 auto;">Maevane accompagne les organisations dans leur transformation cloud, à travers une approche expérimentale et concrète reposant sur la veille, le prototypage, l’audit, et l’accélération des usages cloud natifs.</p>
+    </section>
+    <section id="experimentation" class="container">
+      <div class="section-title">L’expérimentation cloud natif</div>
+      <p style="text-align:center;max-width:700px;margin:0 auto 2.1rem auto;">Nous croyons que l’innovation naît du mélange entre curiosité, expertise et agilité. Notre équipe teste en continu les dernières technologies, architectures et modèles pour créer des solutions robustes, sobres et adaptées aux enjeux réels du numérique responsable.</p>
+      <div class="values-cards">
+        <div class="card">
+          <div class="card-icon">☁️</div>
+          <div class="card-title" style="font-weight:700;font-size:1.12rem;">Cloud natif</div>
+          <div class="card-desc">Expertise sur Kubernetes, serverless, IaC et les nouveaux paradigmes d’infrastructure modulaires.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔬</div>
+          <div class="card-title" style="font-weight:700;font-size:1.12rem;">Culture de l’expérimentation</div>
+          <div class="card-desc">Prototypages rapides, tests de concepts, preuves de valeur techniques et business.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <div class="card-title" style="font-weight:700;font-size:1.12rem;">Numérique responsable</div>
+          <div class="card-desc">Solutions sobres, éthiques et soucieuses de leur impact environnemental et social.</div>
+        </div>
+      </div>
+    </section>
+    <section id="valeurs" class="container">
+      <div class="section-title">Nos valeurs</div>
+      <div class="values-cards">
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <div class="card-title" style="font-weight:700;">Audace</div>
+          <div class="card-desc">Oser questionner, bousculer et expérimenter pour créer de la vraie valeur.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <div class="card-title" style="font-weight:700;">Collaboration</div>
+          <div class="card-desc">Co-construire dans la transparence avec clients, partenaires et la communauté.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <div class="card-title" style="font-weight:700;">Pragmatisme</div>
+          <div class="card-desc">Aller à l’essentiel : des preuves tangibles, utiles, mesurables.</div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="container contact">
+      <div class="section-title">Contact</div>
+      <p>Envie d’expérimenter le cloud natif ou d’en discuter ?<br />Écrivez-nous : <a href="mailto:hello@maevane.com" style="color:var(--main);font-weight:600;">hello@maevane.com</a></p>
+      <a class="btn-main" style="margin-top:0.7rem;" href="mailto:hello@maevane.com">Prendre contact</a>
+    </section>
+  </main>
+  <footer class="footer">
+    © 2024 Maevane · <a href="https://www.linkedin.com/company/maevane" style="color:var(--main);text-decoration:none;font-weight:600;">LinkedIn</a>
+  </footer>
+</body>
 </html>
